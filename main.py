@@ -1,12 +1,20 @@
 import cv2
 import os
+import shutil
 
-img_dir = "D:\Comp-Eng-2023\ImageAI\ourCode\images"
+#img_dir = "D:\Comp-Eng-2023\ImageAI\ourCode\images"
 
+#making an images directory 
+directory = "images"
+parent_dir = os.getcwd()
+img_dir = os.path.join(parent_dir, directory)
+if os.path.exists(img_dir):
+    shutil.rmtree(img_dir)
+os.mkdir(img_dir)
 
 def get_photo(): # function to take a photo and save it to "images" folder
     img_counter = 0
-    directory = "D:\Comp-Eng-2023\ImageAI\ourCode\images" # path to the images folder  
+    directory = img_dir # path to the images folder  
     cam = cv2.VideoCapture(0) #set the capture device to default 
     
     cv2.namedWindow("test") # name the video window
