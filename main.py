@@ -3,6 +3,11 @@ import os
 import shutil
 
 #img_dir = "D:\Comp-Eng-2023\ImageAI\ourCode\images"
+#from image_prediction import *
+
+from fastapi import FastAPI
+
+app = FastAPI()
 
 #making an images directory 
 directory = "images"
@@ -56,7 +61,13 @@ def predict(dir): # function to call the prediction function
     os.chdir("..")
     os.system('python .\image_prediction.py -f '+ dir)
 
+@app.post("/")
+def start_process():
+    get_photo()
+    dir_newest = newest(path = img_dir)
+    predict(dir = dir_newest)
+    #return {get_prediction() + " : " + get_probability()}
+    return {"process ended successfully"}
 
-get_photo()
-dir_newest = newest(path = img_dir)
-predict(dir = dir_newest)
+# start_process()
+# print(get_prediction() + " : " + get_probability())
