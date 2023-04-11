@@ -36,3 +36,9 @@ def text_to_specch(text):
     os.system("prediction.mp3")
 
 text_to_specch(predictions[0])
+
+def get_prediction(index):
+    return predictions[index]
+
+def get_probability(index):
+    return probabilities[index]
