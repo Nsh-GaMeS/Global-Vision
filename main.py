@@ -8,5 +8,4 @@ app = FastAPI()
 models.Base.metadata.create_all(bind=engine)
 
 app.include_router(auth.router)     #authentication router for user sign-in 
-app.include_router(resourceurl.router)
-
+app.include_router(resourceurl.router)  #resourceurl router for all the apps logic operations. 

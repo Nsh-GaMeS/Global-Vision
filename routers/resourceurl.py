@@ -18,6 +18,9 @@ router = APIRouter(
     responses={404: {"description": "Not found"}}
 )
 
+class photoBitMap(BaseModel):
+    photo: str
+
 models.Base.metadata.create_all(bind=engine)
 
 
@@ -45,7 +48,7 @@ if os.path.exists(img_dir):
     shutil.rmtree(img_dir)
 os.mkdir(img_dir)
 
-@router.get("/get_photo")
+@router.get("/take_photo_locally")
 def get_photo(): # function to take a photo and save it to "images" folder
     img_counter = 0
     directory = img_dir # path to the images folder  
@@ -130,6 +133,12 @@ def start_process():
     predict(dir = dir_newest)
     #return {get_prediction() + " : " + get_probability()}
     return {"process ended successfully"}
+
+@router.put("/get_photo")
+def get_photo_from_app(photo: photoBitMap):
+    bitmap = photo.photo
+    print(bitmap)
+    return bitmap
 
 def successful_response(status_code: int):
     return {
