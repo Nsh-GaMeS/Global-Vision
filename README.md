@@ -3,7 +3,7 @@
 GlobalVision is an app that processes an image and recognizes and predicts what's in the picture, and then it says it out loud. GlobalVison uses an API database to process any image and identify it, along with utilizing text-to-speech to say the name of the image out loud. This product is built not only for anyone willing to try this new technology but also especially for those with impaired vision, giving them a chance to see the world. Although GlobalVision is not something that is necessarily ready to be incorporated into the daily lives of blind people, it is a step in the right direction to advocate for those with disabilities and push for positive change utilizing AI technology, giving everyone a chance to see.
 
 this is the back end of the final product it contains the sign-in/sign-up API. which is implemented with the FastAPI Python library. 
-this project works directly with the Android app available in this repository: https://github.com/dkaty1/GlobalVisionICS4U
+this project works directly with the Android app available in this repository: https://github.com/dkaty1/GlobalVisionICS4U or the GlobalVisionFinal.zip file
 
 <br/> libraries used:  FastAPI, sqlalchemy, pydantic, passlib, JWT, shutil, base64.
 
@@ -82,3 +82,6 @@ in case users url - return 200 with
 # credits 
 Authors: Nathaniel Shafran Avshalom, Dev Katyal <br />
 ICS4U assignment
+
+# Licence
+MIT Licence. see licence file
