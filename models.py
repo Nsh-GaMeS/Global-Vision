@@ -1,3 +1,5 @@
+# specify the columns in the database in the users database. includes two tabels Users tabel and ResourceUrl table
+
 from sqlalchemy import Boolean, Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from database import Base

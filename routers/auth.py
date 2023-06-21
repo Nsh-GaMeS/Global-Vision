@@ -1,3 +1,5 @@
+# imports
+
 import sys
 sys.path.append("..")
 
@@ -12,11 +14,11 @@ from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from datetime import datetime, timedelta
 from jose import jwt, JWTError
 
-
+# not the most secure system
 SECRET_KEY = "KlgH6AzYDeZeGwD288to79I3vTHT8wp7"
 ALGORITHM = "HS256"
 
-
+# schemas
 class CreateUser(BaseModel):
     username: str
     email: Optional[str]
@@ -37,14 +39,14 @@ models.Base.metadata.create_all(bind=engine)
 
 oauth2_bearer = OAuth2PasswordBearer(tokenUrl="token")
 
-
+#router declaration 
 router = APIRouter(
     prefix="/auth",
     tags=["auth"],
     responses={401: {"user": "Not authorized"}}
 )
 
-
+# get local db session
 def get_db():
     try:
         db = SessionLocal()
@@ -116,6 +118,7 @@ async def create_new_user(create_user: CreateUser, db: Session = Depends(get_db)
     db.add(create_user_model)
     db.commit()
 
+#sign in/ get token function 
 @router.post("/create/token")
 async def get_user_token(create_user: credentials, db: Session = Depends(get_db)):
     user = authenticate_user(create_user.username, create_user.password, db)
@@ -132,8 +135,9 @@ async def allusers(db: Session = Depends(get_db)):
     users = get_all_users(db)
     return {"users": users}
 
-# get user by ID
+# add in the future
 
+# get user by ID
 # delete user by ID
 
 #Exceptions

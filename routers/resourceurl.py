@@ -138,6 +138,8 @@ def start_process():
     predict(dir = dir_newest)
     return {"process ended successfully"}
 
+# for future 
+           
 # decode the base64 string into a photo on the local machine
 # @router.get("/get_photo/{photo_bitmap}")
 # def get_photo_from_app(photo_bitmap: str):
