@@ -1,6 +1,7 @@
 import sys
 sys.path.append("..")
 
+# imports
 import base64 
 import os
 import shutil
@@ -13,11 +14,13 @@ from sqlalchemy.orm import Session
 from pydantic import BaseModel, Field
 from .auth import get_current_user, get_user_exception
 
+# router declaretion 
 router = APIRouter(
     prefix="/resourceurl",
     tags=["resourceurl"],
     responses={404: {"description": "Not found"}}
 )
+
 
 class photoBitMap(BaseModel):
     photo: str
@@ -135,13 +138,14 @@ def start_process():
     predict(dir = dir_newest)
     return {"process ended successfully"}
 
-@router.get("/get_photo/{photo_bitmap}")
-def get_photo_from_app(photo_bitmap: str):
-    #decoded_data=base64.b64decode((photo_bitmap))
-    #write the decoded data back to original format in  file
-    #img_file = open('/images/image.png', 'wb')
-    #img_file.write(decoded_data)
-    print(decoded_data) 
+# decode the base64 string into a photo on the local machine
+# @router.get("/get_photo/{photo_bitmap}")
+# def get_photo_from_app(photo_bitmap: str):
+#     #decoded_data=base64.b64decode((photo_bitmap))
+#     #write the decoded data back to original format in  file
+#     #img_file = open('/images/image.png', 'wb')
+#     #img_file.write(decoded_data)
+#     print(decoded_data) 
 
 def successful_response(status_code: int):
     return {
