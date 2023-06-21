@@ -9,7 +9,7 @@ this project works directly with the Android app available in this repository: h
 
 
 # How to use
-###**PIP INSTALL requirements.txt**
+**###PIP INSTALL requirements.txt**
 
 Run application locally: uvicorn main:app --port 9000 --reload
 Open API Specification: http://127.0.0.1:8000/docs <br />
