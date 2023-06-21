@@ -5,6 +5,8 @@ GlobalVision is an app that processes an image and recognizes and predicts what'
 this is the back end of the final product it contains the sign-in/sign-up API. which is implemented with the FastAPI Python library. 
 this project works directly with the Android app available in this repository: https://github.com/dkaty1/GlobalVisionICS4U
 
+<br/> libraries used:  FastAPI, sqlalchemy, pydantic, passlib, JWT, shutil, base64.
+
 
 
 
@@ -79,4 +81,4 @@ in case users url - return 200 with
 
 # credits 
 Authors: Nathaniel Shafran Avshalom, Dev Katyal <br />
-ICS4U assignment\
+ICS4U assignment
