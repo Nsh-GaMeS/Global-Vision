@@ -6,10 +6,13 @@ this is the back end of the final product it contains the sign-in/sign-up API. w
 this project works directly with the Android app available in this repository: https://github.com/dkaty1/GlobalVisionICS4U
 
 
+
+
 # How to use
 
+
 Run application locally: uvicorn main:app --port 9000 --reload
-Open API Specification: http://127.0.0.1:8000/docs
+Open API Specification: http://127.0.0.1:8000/docs <br />
 
 to be able to use this application 
 1. add user : 
@@ -23,7 +26,7 @@ to be able to use this application
   "first_name": "string",
   "last_name": "string",
   "password": "pwd2"
-}'
+}' <br />
 
 2. generate token for user
 curl -X 'POST' 'http://127.0.0.1:8000/auth/token' -H 'accept: application/json' -H 'Content-Type: application/x-www-form-urlencoded' -d 'grant_type=&username=usr1&password=pwd1&scope=&client_id=&client_secret=' 
@@ -76,4 +79,4 @@ in case users url - return 200 with
 
 # credits 
 Authors: Nathaniel Shafran Avshalom, Dev Katyal <br />
-ICS4U assignment 
+ICS4U assignment\
