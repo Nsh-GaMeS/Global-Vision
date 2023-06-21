@@ -75,5 +75,5 @@ in case users url - return 200 with
 }
 
 # credits 
-Authors: Nathaniel Shafran Avshalom, Dev Katyal
+Authors: Nathaniel Shafran Avshalom, Dev Katyal <br />
 ICS4U assignment 
