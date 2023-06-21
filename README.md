@@ -11,7 +11,7 @@ this project works directly with the Android app available in this repository: h
 
 
 # How to use
-**PIP INSTALL requirements.txt**
+**pip install -r requirements.txt**
 
 Run application locally: uvicorn main:app --port 9000 --reload <br />
 Open API Specification: http://127.0.0.1:8000/docs <br />
@@ -84,4 +84,4 @@ Authors: Nathaniel Shafran Avshalom, Dev Katyal <br />
 ICS4U assignment
 
 # Licence
-MIT Licence. see licence file
+MIT Licence. see [licence file ](https://github.com/Nsh-GaMeS/Global-Vision/blob/main/LICENSE)
