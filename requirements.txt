@@ -28,7 +28,7 @@ pyasn1==0.6.4
 pycparser==2.21
 pydantic==1.10.13
 PyMySQL==1.1.1
-python-jose==3.4.0
+python-jose==3.5.0
 python-multipart==0.0.31
 rsa==4.8
 six==1.16.0
