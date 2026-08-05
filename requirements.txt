@@ -29,7 +29,7 @@ pycparser==2.21
 pydantic==2.13.4
 PyMySQL==1.1.1
 python-jose==3.5.0
-python-multipart==0.0.31
+python-multipart==0.0.32
 rsa==4.8
 six==1.16.0
 SQLAlchemy==1.4.25
