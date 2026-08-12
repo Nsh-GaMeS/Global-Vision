@@ -6,7 +6,7 @@ opencv-python>=5.0.0.93
 torch>=2.13.0 --extra-index-url https://download.pytorch.org/whl/cpu
 torchvision>=0.10.0 --extra-index-url https://download.pytorch.org/whl/cpu
 pytest==9.1.1
-tqdm==4.66.3
+tqdm==4.70.0
 scipy>=1.7.3
 matplotlib>=3.11.1
 mock==4.0.3
