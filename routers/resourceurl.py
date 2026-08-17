@@ -106,8 +106,12 @@ async def get_resourceurl(resource_url_with_query_string: str,
 # returns newest file on the APIs host machine 
 @router.get("/newest_file")
 def newest(path): # gets the latest created file
-     files = os.listdir(path)
-     paths = [os.path.join(path, basename) for basename in files]
+     safe_root = os.path.realpath(img_dir)
+     requested_path = os.path.realpath(path)
+     if requested_path != safe_root:
+         raise HTTPException(status_code=400, detail="Invalid path")
+     files = os.listdir(safe_root)
+     paths = [os.path.join(safe_root, basename) for basename in files]
      return max(paths, key=os.path.getctime)
 
 # creates the resourcerul table and checks if users still exists  
