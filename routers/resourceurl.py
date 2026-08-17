@@ -4,6 +4,7 @@ sys.path.append("..")
 # imports
 import base64 
 import os
+import subprocess
 import shutil
 import cv2
 from typing import Optional
@@ -128,7 +129,9 @@ async def create_resourceurl(resourceurl: ResourceUrl,
 @router.get("/predict")
 def predict(dir): # function to call the prediction function
     os.chdir("..")
-    os.system('python .\image_prediction.py -f '+ dir)
+    subprocess.run(
+        ["python", "./image_prediction.py", "-f", dir]
+    )
 
 #method to start the capture and prediction proccess localy 
 @router.post("/start_process")
@@ -158,5 +161,3 @@ def successful_response(status_code: int):
 
 def http_exception():
     return HTTPException(status_code=404, detail="ResourceURL not found in users DB")
-
-
