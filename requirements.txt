@@ -1,6 +1,6 @@
 imageai==3.0.3
 cython
-pillow>=7.0.0
+pillow>=12.3.0
 numpy>=1.18.1
 opencv-python>=5.0.0.93
 torch>=2.13.0 --extra-index-url https://download.pytorch.org/whl/cpu
