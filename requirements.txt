@@ -9,7 +9,7 @@ pytest==9.1.1
 tqdm==4.70.0
 scipy>=1.7.3
 matplotlib>=3.11.1
-mock==4.0.3
+mock==5.2.0
 alembic==1.19.1
 aiofiles==0.5.0
 bcrypt==3.2.0
